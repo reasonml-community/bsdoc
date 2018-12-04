@@ -1,21 +1,24 @@
 open Common;
+open Operators.Option;
 open Logger;
 
 let support_files = (flags, out_dir) => {
   info({j|Copying support files (CSS, JS) into $out_dir|j});
+
+  debug({j|Making sure output dir $out_dir exists...|j});
+  mkdirp(out_dir);
+
   Odoc.support_files(out_dir);
   info({j|Done ✅|j});
 };
 
-let build = (flags, out_dir) => {
-  let pkg_name = "ReActor";
-  let src_dir = "./src";
-  let lib_dir = "./lib/bs/src";
-  let out_dir = "./docs";
-
+let build = (flags, out_dir, pkg_name, src_dir, lib_dir) => {
   let package = BuckleScript.package(pkg_name, src_dir, lib_dir);
 
   info({j|Compiling documentation for package "$pkg_name"...|j});
+
+  debug({j|Making sure output dir $out_dir exists...|j});
+  mkdirp(out_dir);
 
   debug({j|Looking for .cmti files in $lib_dir|j});
   debug({j|Compiling .cmti files into .odoc files...|j});

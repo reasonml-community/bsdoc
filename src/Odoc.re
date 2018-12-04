@@ -5,10 +5,11 @@ module Bin = {
   let odoc = run("odoc");
 
   let support_files = out_dir =>
-    odoc(["support-files", "--output-dir", out_dir]);
+    odoc(["support-files", "--output-dir", out_dir]) |> ignore;
 
   let compile = (lib_dir, pkg_name, file_name) =>
-    odoc(["compile", "-I", lib_dir, {j|--pkg=$pkg_name|j}, file_name]);
+    odoc(["compile", "-I", lib_dir, {j|--pkg=$pkg_name|j}, file_name])
+    |> ignore;
 
   let compile_mld = (lib_dir, out_file, pkg_name, file_name) =>
     odoc([
@@ -19,7 +20,8 @@ module Bin = {
       "-o",
       out_file,
       file_name,
-    ]);
+    ])
+    |> ignore;
   let html = (lib_dir, out_dir, file_name) =>
     odoc([
       "html",
@@ -30,7 +32,8 @@ module Bin = {
       "--syntax=re",
       "--semantic-uris",
       file_name,
-    ]);
+    ])
+    |> ignore;
 };
 
 let support_files = Bin.support_files;

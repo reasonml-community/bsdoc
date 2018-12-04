@@ -38,7 +38,7 @@ module SharedOpts = {
 
 module SupportFiles = {
   let cmd = {
-    let outdir = {
+    let out_dir = {
       let doc = "Output directory of the generated documentation";
       Arg.(
         value
@@ -60,7 +60,7 @@ amount of Javascript to support syntax highlightning.|j},
     ];
 
     (
-      Term.(const(BsDoc.build) $ SharedOpts.flags $ outdir),
+      Term.(const(BsDoc.support_files) $ SharedOpts.flags $ out_dir),
       Term.info(
         "support-files",
         ~doc,
@@ -74,12 +74,39 @@ amount of Javascript to support syntax highlightning.|j},
 
 module Build = {
   let cmd = {
-    let outdir = {
+    let pkg_name = {
+      let doc = "The name of your package (e.g., BsDoc)";
+      Arg.(
+        required
+        & pos(~rev=true, 0, some(string), None)
+        & info([], ~docv="NAME", ~doc)
+      );
+    };
+
+    let lib_dir = {
+      let doc = "Compilation directory where your .cmt/.cmti files live";
+      Arg.(
+        value
+        & opt(file, "./lib/bs/src")
+        & info(["l", "lib-dir"], ~docv="DIR", ~doc)
+      );
+    };
+
+    let src_dir = {
+      let doc = "Source directory where your .mld files live";
+      Arg.(
+        value
+        & opt(file, "./src")
+        & info(["s", "source-dir"], ~docv="DIR", ~doc)
+      );
+    };
+
+    let out_dir = {
       let doc = "Output directory of the generated documentation";
       Arg.(
         value
         & opt(file, "./docs")
-        & info(["o", "outdir"], ~docv="OUTDIR", ~doc)
+        & info(["o", "output-dir"], ~docv="DIR", ~doc)
       );
     };
 
@@ -95,7 +122,14 @@ global odoc installation.|j},
     ];
 
     (
-      Term.(const(BsDoc.build) $ SharedOpts.flags $ outdir),
+      Term.(
+        const(BsDoc.build)
+        $ SharedOpts.flags
+        $ out_dir
+        $ pkg_name
+        $ src_dir
+        $ lib_dir
+      ),
       Term.info("build", ~doc, ~sdocs=Manpage.s_common_options, ~exits, ~man),
     );
   };
