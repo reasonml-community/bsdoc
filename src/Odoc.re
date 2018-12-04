@@ -1,4 +1,5 @@
 open Common;
+open OS;
 open Logger;
 
 module Bin = {
@@ -50,11 +51,11 @@ let cmti_to_odoc = (lib_dir, pkg_name, cmti) => {
 };
 
 let mld_to_odoc = (lib_dir, src_dir, pkg_name, mld) => {
-  let odoc = as_odoc(mld);
+  let odoc = "page-"++as_odoc(mld);
   debug({j|Compiling $mld to $odoc...|j});
   Bin.compile_mld(
     lib_dir,
-    Filename.concat(lib_dir, mld),
+    Filename.concat(lib_dir, odoc),
     pkg_name,
     Filename.concat(src_dir, mld),
   );
