@@ -7,8 +7,7 @@ deps:
 
 .PHONY: docs
 docs: build
-	@./scripts/mk-docs.sh ReActor ./lib/bs/src ./src "*.cmti"
-	@./scripts/mk-docs.sh Examples ./lib/bs/examples ./examples "*.cmt"
+	@./bin/bsdoc.js build --verbose BsDoc
 
 .PHONY: build
 build: deps
