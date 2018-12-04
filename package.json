@@ -1,0 +1,23 @@
+{
+  "name": "bsdoc",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "bin": {
+    "bsdoc": "./bin/bsdoc.js"
+  },
+  "author": "Leandro Ostera <leandro@ostera.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^4.0.5"
+  },
+  "dependencies": {
+    "@elliottcable/bs-cmdliner": "^1.0.2"
+  }
+}
