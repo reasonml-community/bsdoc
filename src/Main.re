@@ -1,0 +1,2 @@
+VersionChecks.check();
+Cli.run();
