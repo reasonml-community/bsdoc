@@ -14,7 +14,9 @@ bs-platform@^4.0.1, bs-platform@^4.0.5:
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.7.tgz#1a0bbf0fef439fef5f1a88ba60d5ac8a6d73570c"
   integrity sha512-39ZXSugB03PznE7eSVwxq5z4S8Cn44r22T2eFd7rgFQ94HaB/mCNHXG0epF3mJLYhhhyPT9w3e/t+FAIjSdAkg==
 
-bsdoc@../:
+bsdoc@^0.1.0:
   version "0.1.0"
+  resolved "https://registry.yarnpkg.com/bsdoc/-/bsdoc-0.1.0.tgz#506882e05269bbe04e0b0b17dadd93c3558409cc"
+  integrity sha512-xSzvs1MKnx27PYsiNlr9qyka127U4yGD80p19qLGp2st70iSJdSvWAP/H//Ee+9PzJHNz0CD8pbHkGpC7hbcZA==
   dependencies:
     "@elliottcable/bs-cmdliner" "^1.0.2"

@@ -4,17 +4,11 @@
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "clean": "bsb -clean-world",
+    "docs": "bsdoc build Example"
   },
-  "keywords": [
-    "BuckleScript"
-  ],
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^4.0.5"
-  },
-  "dependencies": {
-    "bsdoc": "../"
+    "bs-platform": "^4.0.5",
+    "bsdoc": "^0.1.0"
   }
 }
