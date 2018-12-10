@@ -34,15 +34,33 @@ need to do some setup.
 We will need 3 things. Only 3, but I promise we're working on making this be
 zero things. Okay, let's do this!
 
-+ Install [opam] — you can check their amazing documentation {{:http://opam.ocaml.org/doc/Install.html}here}.
++ Install [opam] — you can check their amazing documentation
+	{{:http://opam.ocaml.org/doc/Install.html}here}.
 + Create an [opam switch] with version [4.02.3+buckle-master] — [opam switch
-create 4.02.3+buckle-master]
+	create 4.02.3+buckle-master]
 + Install [odoc] — [opam install odoc]
 
 That should be the setup you need to generate documentation. If you want to
 learn more about {b why} do we need all this, please read on!
 
 Now finally we can run [yarn add bsdoc] to install.
+
+Make sure to save it as a development time dependency, to include it in
+your [bsconfig.json], and that you have a [package-spec] that build CommonJS 
+out of source:
+
+{[
+//...
+  "package-specs": [
+    // ...
+    { "module": "commonjs", "in-source": false },
+  ],
+  "bs-dependencies": [
+    // ...
+    "bsdoc",
+  ],
+// ...
+]}
 
 {3 Generating Docs}
 
