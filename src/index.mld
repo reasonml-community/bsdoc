@@ -106,7 +106,7 @@ inside of it or how it's going to be used.
 {[
 /** 
   The Infinity Stone type is the most powerful type in the Universe. Very few
-  can wield it's powers!
+  can wield its powers!
   */
 type infinity_stone;
 ]}
