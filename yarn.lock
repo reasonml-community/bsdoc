@@ -2,13 +2,14 @@
 # yarn lockfile v1
 
 
-"@elliottcable/bs-cmdliner@https://github.com/ostera/bs-cmdliner":
+"@elliottcable/bs-cmdliner@^1.0.2":
   version "1.0.2"
-  resolved "https://github.com/ostera/bs-cmdliner#6c0bd5420c6d36348eeb791360d4f32b072ccb5f"
+  resolved "https://registry.yarnpkg.com/@elliottcable/bs-cmdliner/-/bs-cmdliner-1.0.2.tgz#825b3351d3beee7def38f7603b81e2a8bb73e939"
+  integrity sha512-jjxxtT/lJO0pQfPbxP3uZKV+E0/WVoT0f8GZvozbZXV19DdNKnFz91yERbI/VhwsY11nkqF6h5FWAWEF8lBj6Q==
   dependencies:
-    bs-platform "4.0.5"
+    bs-platform "^4.0.1"
 
-bs-platform@4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.5.tgz#d4fd9bbdd11765af5b75110a5655065ece05eed6"
-  integrity sha512-wK+yUx/5ojlrxgk/EB3Hla7+9NEnE8PxtGb71e4IsKnWPXrRAaVtdTuoWWClv8z77xntOFg8qTgYfYyh9xLMWA==
+bs-platform@^4.0.1, bs-platform@^4.0.11:
+  version "4.0.11"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-4.0.11.tgz#9d195d1ad798a60b872d7612827c70e6f4c0ed05"
+  integrity sha512-p0aYHXbK8ZO4ZHxwyQ1f0LEhbdkAMPB3FCwIY4HZrfrg0PB6Sc4y2L2al3kL+33sp/FOaMyfzuEnaF6HysuJgg==
