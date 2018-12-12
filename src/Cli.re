@@ -47,7 +47,8 @@ module SupportFiles = {
       );
     };
 
-    let doc = "Copy the support files (e.g. default theme, JavaScript files) to the output directory.";
+    let doc = {j|Copy the support files (e.g. default theme, JavaScript files)
+to the output directory.|j};
     let exits = Term.default_exits;
     let man = [
       `S(Manpage.s_description),

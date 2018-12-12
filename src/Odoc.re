@@ -23,6 +23,7 @@ module Bin = {
       file_name,
     ])
     |> ignore;
+
   let html = (lib_dir, out_dir, file_name) =>
     odoc([
       "html",
@@ -51,7 +52,7 @@ let cmti_to_odoc = (lib_dir, pkg_name, cmti) => {
 };
 
 let mld_to_odoc = (lib_dir, src_dir, pkg_name, mld) => {
-  let odoc = "page-"++as_odoc(mld);
+  let odoc = "page-" ++ as_odoc(mld);
   debug({j|Compiling $mld to $odoc...|j});
   Bin.compile_mld(
     lib_dir,
