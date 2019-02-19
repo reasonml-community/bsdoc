@@ -1,5 +1,5 @@
 # bsdoc
-> Documentation Generator for BuckleScript projects.
+> Lets you use `odoc` in your BuckleScript projects.
 
 Status: __alpha__.
 
