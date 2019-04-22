@@ -8,7 +8,7 @@
     "docs": "bsdoc build Example"
   },
   "devDependencies": {
-    "bsdoc": "6.0.0-alpha"
+    "bsdoc": "^6.0.1-alpha"
   },
   "dependencies": {
     "bs-platform": "^6.0.0-dev.1"

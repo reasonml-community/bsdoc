@@ -42,21 +42,21 @@ let as_odoc = name => filename(name) ++ ".odoc";
 
 let cmti_to_odoc = (lib_dir, pkg_name, cmti) => {
   let odoc = as_odoc(cmti);
-  Logs.debug(m => m({j|Compiling $cmti to $odoc...|j}));
+  Logs.debug(m => m("Compiling %s to %s...", cmti, odoc));
   Bin.compile(lib_dir, pkg_name, cmti);
   odoc;
 };
 
 let mld_to_odoc = (lib_dir, _src_dir, pkg_name, mld) => {
   let odoc = "page-" ++ as_odoc(mld);
-  Logs.debug(m => m({j|Compiling $mld to $odoc...|j}));
+  Logs.debug(m => m("Compiling %s to %s...", mld, odoc));
   Bin.compile_mld(lib_dir, Filename.concat(lib_dir, odoc), pkg_name, mld);
   odoc;
 };
 
 let odoc_to_html = (lib_dir, out_dir, odoc) => {
   let html = filename(odoc) ++ ".html";
-  Logs.debug(m => m({j|Compiling $odoc to $html...|j}));
+  Logs.debug(m => m("Compiling %s to %s...", odoc, html));
   Bin.html(lib_dir, out_dir, Filename.concat(lib_dir, odoc));
   html;
 };
