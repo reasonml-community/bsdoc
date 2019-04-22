@@ -1,4 +1,6 @@
 (executable
-  (name bsdoc)
-  (public_name bsdoc)
-  (libraries cmdliner fmt logs logs.fmt fmt.tty bos unix))
+ (name bsdoc)
+ (public_name bsdoc)
+ (libraries cmdliner fmt logs logs.fmt fmt.tty bos unix))
+
+(documentation)

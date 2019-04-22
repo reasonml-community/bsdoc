@@ -10,9 +10,9 @@ Status: [alpha].
 <nav class="toc">
 %}
 {ol
-  {li {{:#quick-start} Quick Start}}
+  {li {{:#install} Install}}
   {li {{:#generating-docs} Generating Docs}}
-  {li {{:#a-byte-of-insight} A Byte of Insight...}}
+  {li {{:#a-byte-of-insight...} A Byte of Insight...}}
   {li {{:#tips-&-tricks} Tips & Tricks}
     {ol
       {li {{:#keep-your-docs-in-your-interfaces!} Keep Your Docs in your
@@ -24,10 +24,7 @@ Status: [alpha].
 </nav>
 %}
 
-{3 Quick Start}
-
-Before you crank up the documenting knob and write some of your best docs, we
-need to do some setup.
+{3 Install}
 
 Run [yarn add bsdoc@6.0.0-alpha] to install.
 
