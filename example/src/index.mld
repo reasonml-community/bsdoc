@@ -1,1 +1,5 @@
 {2:top Index}
+
+Hello! This is a sample project with documentation built with Bsdoc.
+
+Check out the module {!Demo}.
