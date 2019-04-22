@@ -12,10 +12,24 @@ let run = (cmd, args) => {
   );
 };
 
-let readdir = path =>
-  path
-  |> Fpath.v
-  |> Bos.OS.Dir.contents
-  |> Rresult.R.ignore_error(~use=_ => []);
+let readdir = path => {
+  let path = path |> Fpath.v;
+  let rec read: Fpath.t => list(Fpath.t) =
+    p => {
+      p
+      |> Bos.OS.Dir.contents
+      |> Rresult.R.ignore_error(~use=_ => [])
+      |> List.map(p' => {
+           let is_folder =
+             Bos.OS.Dir.exists(p') |> Rresult.R.ignore_error(~use=_ => false);
+           switch (is_folder) {
+           | true => read(p')
+           | _ => [p']
+           };
+         })
+      |> List.concat;
+    };
+  read(path);
+};
 
 let mkdirp = path => Bos.OS.Dir.create(~path=true, path |> Fpath.v);

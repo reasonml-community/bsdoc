@@ -36,9 +36,10 @@ module Bin = {
 
 let support_files = Bin.support_files;
 
-let filename = path => Filename.(path |> basename |> chop_extension);
+let swap_extension = (ext, path) => Filename.(path |> chop_extension) ++ ext;
 
-let as_odoc = name => filename(name) ++ ".odoc";
+let as_odoc = swap_extension(".odoc");
+let as_html = swap_extension(".html");
 
 let cmti_to_odoc = (lib_dir, pkg_name, cmti) => {
   let odoc = as_odoc(cmti);
@@ -55,8 +56,8 @@ let mld_to_odoc = (lib_dir, _src_dir, pkg_name, mld) => {
 };
 
 let odoc_to_html = (lib_dir, out_dir, odoc) => {
-  let html = filename(odoc) ++ ".html";
+  let html = as_html(odoc);
   Logs.debug(m => m("Compiling %s to %s...", odoc, html));
-  Bin.html(lib_dir, out_dir, Filename.concat(lib_dir, odoc));
+  Bin.html(lib_dir, out_dir, odoc);
   html;
 };

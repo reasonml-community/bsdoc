@@ -1,6 +1,6 @@
 {
   "name": "bsdoc",
-  "version": "6.0.1-alpha",
+  "version": "6.0.2-alpha",
   "keywords": [
     "BuckleScript",
     "Odoc-driver",
@@ -34,6 +34,7 @@
     "@opam/fmt": "0.8.6",
     "@opam/logs": "0.6.3",
     "@opam/odoc": "1.4.0",
+    "@opam/utop": "2.3.0",
     "ocaml": "~4.6.0",
     "refmterr": "*"
   },

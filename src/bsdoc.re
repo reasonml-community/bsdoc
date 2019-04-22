@@ -99,7 +99,7 @@ module Build = {
       let doc = "Compilation directory where your .cmt/.cmti files live";
       Arg.(
         value
-        & opt(file, "./lib/bs/src")
+        & opt(file, "./lib/bs")
         & info(["l", "lib-dir"], ~docv="DIR", ~doc)
       );
     };
