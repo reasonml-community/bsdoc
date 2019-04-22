@@ -40,7 +40,7 @@ To generate your documentation it's enough to just run:
 docs.
 
 You can use the very sensible defaults used to generate [bsdoc] docs, or you can
-customize plenty of parameters. Try adding `--help` in any command to see more
+customize plenty of parameters. Try adding [--help] in any command to see more
 details on all the parameters available, their behavior, and their default
 values.
 
@@ -67,7 +67,7 @@ Don't forget that in Reason and OCaml the type system can easily tell you
 exactly what the type of anything is, so learn the editor shortcut for that
 instead and I promise you'll find reading your code much more enjoyable.
 
-As a rule of thumb, begin a module with a `.rei` or `.mli` and begin by
+As a rule of thumb, begin a module with a [.rei] or [.mli] and begin by
 documenting what things are, not how they are internally. This normally means
 that you'll want to just say you have a type, but not really describe what's
 inside of it or how it's going to be used.
