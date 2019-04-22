@@ -1,8 +1,6 @@
 # bsdoc
 > Documentation Generation for BuckleScript projects
 
-Status: __alpha__.
-
 Read more in the docs: [BsDoc](https://ostera.github.io/bsdoc)
 
 ## Usage
@@ -40,7 +38,8 @@ info: Done ✅
 ✨  Done in 0.58s.
 ```
 
-Additionally, to install the support files (default CSS and Javascript), you can run:
+Additionally, to install the support files (default CSS and Javascript), you
+can run:
 
 ```sh
 # Create the support files
@@ -55,8 +54,10 @@ info: Done ✅
 ## Contributing
 
 `bsdoc` is developed as a Native Reason project, and is only possible thanks to
-`esy` and `dune`.
+`esy`, `dune`, and, naturally, `odoc`.
 
-If you haven't installed Esy yet, follow the isntructions in their web site: https://esy.sh
+If you haven't installed Esy yet, follow the isntructions in their web site:
+https://esy.sh
 
-After you have done that, you need only run `esy build` to get the project bootstrapped.
+After you have done that, you need only run `esy build` to get the project
+bootstrapped.
