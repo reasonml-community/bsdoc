@@ -1,12 +1,25 @@
 {
   "name": "bsdoc",
-  "version": "0.1.4",
-  "keywords": [ "BuckleScript", "documentation", "generation" ],
+  "version": "0.2.1-alpha",
+  "keywords": [
+    "BuckleScript",
+    "Odoc-driver",
+    "documentation",
+    "generation"
+  ],
   "author": "Leandro Ostera <leandro@ostera.io>",
   "license": "MIT",
   "esy": {
     "build": "dune build -p #{self.name}",
-    "release": { "bin": [ "bsdoc.exe" ] }
+    "release": {
+      "bin": [
+        "bsdoc"
+      ],
+      "includePackages": [
+        "root",
+        "@opam/odoc"
+      ]
+    }
   },
   "dependencies": {
     "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
