@@ -1,20 +1,40 @@
 {
   "name": "bsdoc",
-  "version": "0.1.4",
+  "version": "6.0.0-alpha",
   "keywords": [
     "BuckleScript",
+    "Odoc-driver",
     "documentation",
     "generation"
   ],
-  "bin": {
-    "bsdoc": "./bin/bsdoc.js"
-  },
   "author": "Leandro Ostera <leandro@ostera.io>",
   "license": "MIT",
-  "devDependencies": {
-    "bs-platform": "^4.0.11"
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "release": {
+      "bin": [
+        "bsdoc"
+      ],
+      "includePackages": [
+        "root",
+        "@opam/odoc"
+      ]
+    }
   },
   "dependencies": {
-    "@elliottcable/bs-cmdliner": "^1.0.2"
+    "@esy-ocaml/reason": ">= 3.4.0 < 3.5.0",
+    "@opam/bos": "0.2.0",
+    "@opam/cmdliner": "1.0.3",
+    "@opam/dune": "*",
+    "@opam/fmt": "0.8.6",
+    "@opam/logs": "0.6.3",
+    "@opam/odoc": "1.4.0",
+    "ocaml": "~4.6.0",
+    "refmterr": "*"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "ocaml": "~4.6.0",
+    "@opam/odoc": "*"
   }
 }
