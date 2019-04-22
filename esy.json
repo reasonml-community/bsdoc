@@ -34,7 +34,6 @@
     "@opam/fmt": "0.8.6",
     "@opam/logs": "0.6.3",
     "@opam/odoc": "1.4.0",
-    "@opam/utop": "2.3.0",
     "ocaml": "~4.6.0",
     "refmterr": "*"
   },
