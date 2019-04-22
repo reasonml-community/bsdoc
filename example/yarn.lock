@@ -7,5 +7,7 @@ bs-platform@^6.0.0-dev.1:
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-6.0.0-dev.1.tgz#125a7858ef2f1aa131ee9c2df243d9224825d9bc"
   integrity sha512-1E1G6xEovnWdiQVt0TyS8Z4F+3hJTxMZBKcSHJ9Yf+xMNQgA/BR5HV3IgI8BkPc+dntifiu7JS9yrbws5qksNA==
 
-bsdoc@../_release:
-  version "0.2.1-alpha"
+bsdoc@6.0.0-alpha:
+  version "6.0.0-alpha"
+  resolved "https://registry.yarnpkg.com/bsdoc/-/bsdoc-6.0.0-alpha.tgz#fc8815f8c3f0b78abeae78a5b62b6f988ff81896"
+  integrity sha512-kgNZ5qpQ5gSGaTVGibEGelKUyiLGGLFEMhCYrMRs+gBIKOy680wKEP9ztu1cGqP7wo7O4En7rcdLcM0j1eNz4A==
