@@ -11,6 +11,7 @@
   "license": "MIT",
   "esy": {
     "build": "dune build -p #{self.name}",
+    "buildInSource": "_build",
     "release": {
       "bin": [
         "bsdoc"
