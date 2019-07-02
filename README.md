@@ -3,7 +3,7 @@
 
 [![Build Status](https://dev.azure.com/reuniverse/bsdoc/_apis/build/status/reuniverse.bsdoc?branchName=master)](https://dev.azure.com/ostera/reuniverse/_build/latest?definitionId=1?branchName=master)
 
-Read more in the docs: [BsDoc](https://ostera.github.io/bsdoc)
+Read more in the docs: [BsDoc](https://reuniverse.github.io/bsdoc)
 
 ## Usage
 
