@@ -58,7 +58,7 @@ info: Done ✅
 `bsdoc` is developed as a Native Reason project, and is only possible thanks to
 `esy`, `dune`, and, naturally, `odoc`.
 
-If you haven't installed Esy yet, follow the isntructions in their web site:
+If you haven't installed Esy yet, follow the instructions in their web site:
 https://esy.sh
 
 After you have done that, you need only run `esy build` to get the project
