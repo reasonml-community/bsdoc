@@ -154,7 +154,7 @@ let default_cmd = {
   let man = Shared_optss.help;
   (
     Term.(ret(const(_ => `Help((`Pager, None))) $ Shared_optss.flags)),
-    Term.info("bsdoc", ~version="v6.0.0-alpha", ~doc, ~sdocs, ~exits, ~man),
+    Term.info("bsdoc", ~version="v6.0.3-alpha", ~doc, ~sdocs, ~exits, ~man),
   );
 };
 

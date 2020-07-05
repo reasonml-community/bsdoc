@@ -18,8 +18,7 @@ let package = (name, src_dir, lib_dir) => {
          | None => Hashtbl.add(modules, filename, path)
          | Some(last) =>
            let last_extension = last |> Fpath.get_ext;
-           let extension = path |> Fpath.get_ext;
-           switch (last_extension, extension) {
+           switch (last_extension, ext) {
            | (".cmt", ".cmti") => Hashtbl.replace(modules, filename, path)
            | _ => ()
            };
