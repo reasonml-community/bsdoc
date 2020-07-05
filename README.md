@@ -3,7 +3,7 @@
 
 [![Build Status](https://dev.azure.com/reuniverse/bsdoc/_apis/build/status/reuniverse.bsdoc?branchName=master)](https://dev.azure.com/ostera/reuniverse/_build/latest?definitionId=1?branchName=master)
 
-Read more in the docs: [BsDoc](https://reuniverse.github.io/bsdoc)
+Read more in the docs: [BsDoc](https://reasonml-community.github.io/bsdoc)
 
 ## Usage
 
@@ -73,4 +73,4 @@ $ esy build
 $ esy npm-release
 ```
 
-And that'll get you an npm package that you can then install locally (or globally) in any of your projects. Be mindful that it'll only work for `bs-platform@6` projects!
+And that'll get you an npm package that you can then install locally (or globally) in any of your projects. Be mindful that it'll only work for `bs-platform@6`+ projects!
