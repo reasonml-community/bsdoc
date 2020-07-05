@@ -1,6 +1,6 @@
 parameters:
   platform: "macOS"
-  vmImage: "macOS-10.13"
+  vmImage: "macOS-latest"
   STAGING_DIRECTORY: /Users/vsts/STAGING
   STAGING_DIRECTORY_UNIX: /Users/vsts/STAGING
   ESY__CACHE_INSTALL_PATH: /Users/vsts/.esy/3____________________________________________________________________/i

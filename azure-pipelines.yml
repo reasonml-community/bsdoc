@@ -16,7 +16,7 @@ jobs:
   - template: .ci/build-platform.yml
     parameters:
       platform: macOS
-      vmImage: macOS-10.13
+      vmImage: macOS-latest
       STAGING_DIRECTORY: /Users/vsts/STAGING
       STAGING_DIRECTORY_UNIX: /Users/vsts/STAGING
       ESY__CACHE_INSTALL_PATH: /Users/vsts/.esy/3____________________________________________________________________/i
@@ -39,7 +39,7 @@ jobs:
       - macOS
       - Windows
     pool:
-      vmImage: macOS-10.13
+      vmImage: macOS-latest
       demands: node.js
     steps:
       - template: .ci/cross-release.yml
