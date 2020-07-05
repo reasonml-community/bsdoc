@@ -1,7 +1,8 @@
 # bsdoc
+
 > Documentation Generation for BuckleScript projects
 
-[![Build Status](https://dev.azure.com/reuniverse/bsdoc/_apis/build/status/reuniverse.bsdoc?branchName=master)](https://dev.azure.com/ostera/reuniverse/_build/latest?definitionId=1?branchName=master)
+[![Build Status](https://dev.azure.com/yawaramin/bsdoc/_apis/build/status/yawaramin.bsdoc?branchName=master)](https://dev.azure.com/yawaramin/bsdoc/_build/latest?definitionId=1?branchName=master)
 
 Read more in the docs: [BsDoc](https://reasonml-community.github.io/bsdoc)
 
@@ -10,21 +11,7 @@ Read more in the docs: [BsDoc](https://reasonml-community.github.io/bsdoc)
 Install in your project using `npm` or `yarn`:
 
 ```sh
-$ yarn add bsdoc@6.0.0-alpha
-yarn add v1.12.3
-[1/4] 🔍  Resolving packages...
-[2/4] 🚚  Fetching packages...
-[3/4] 🔗  Linking dependencies...
-[4/4] 📃  Building fresh packages...
-success Saved lockfile.
-warning example@0.1.0: No license field
-warning "bsdoc" is already in "devDependencies". Please remove existing entry first before adding it to "dependencies".
-success Saved 1 new dependency.
-info Direct dependencies
-└─ bsdoc@6.0.0-alpha
-info All dependencies
-└─ bsdoc@6.0.0-alpha
-✨  Done in 6.68s.
+$ yarn add bsdoc
 ```
 
 And whenever you want to generate your docs you can run:

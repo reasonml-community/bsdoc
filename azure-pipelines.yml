@@ -43,3 +43,13 @@ jobs:
       demands: node.js
     steps:
       - template: .ci/cross-release.yml
+
+  - job: Publish
+    condition: startsWith(variables['build.sourceBranch'], 'refs/tags/')
+    steps:
+    - task: Npm@1
+      inputs:
+        command: publish
+        workingDir: "_release"
+        publishEndpoint: NPM
+

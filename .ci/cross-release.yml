@@ -19,13 +19,3 @@ steps:
   - script: "node .ci/pipelines-release.js"
     displayName: "node .ci/pipelines-release.js"
     continueOnError: true
-
-  - script: "npm pack"
-    displayName: "npm pack"
-    workingDirectory: "_release"
-
-  - task: PublishBuildArtifacts@1
-    displayName: "Publish Artifact: Release"
-    inputs:
-      PathtoPublish: "_release"
-      ArtifactName: Release
