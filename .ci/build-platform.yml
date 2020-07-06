@@ -8,6 +8,7 @@ parameters:
 
 jobs:
   - job: ${{ parameters.platform }}
+    condition: eq(variables['build.sourceBranch'], 'refs/heads/master')
     pool:
       vmImage: ${{ parameters.vmImage }}
       demands: node.js
