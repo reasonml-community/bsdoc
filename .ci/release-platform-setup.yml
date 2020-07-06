@@ -6,6 +6,12 @@ steps:
   - task: DownloadBuildArtifacts@0
     displayName: "Download ${{ parameters.platform }} Artifacts"
     inputs:
+      buildType: 'specific'
+      project: '$(System.TeamProject)'
+      pipeline: '$(Build.DefinitionName)'
+      branchName: 'refs/heads/master'
+      buildVersionToDownload: 'latestFromBranch'
+      downloadType: 'single'
       artifactName: ${{ parameters.platform }}
       downloadPath: "_release"
 
