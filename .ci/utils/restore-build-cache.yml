@@ -19,7 +19,7 @@ steps:
     condition: succeeded()
     displayName: '[Cache][Restore] Create cache directory'
 
-  - bash: 'cd $(ESY__CACHE_INSTALL_PATH) && tar -xf $(Build.StagingDirectory)/cache-$(Agent.OS)-install/esy-cache.tar -C .'
+  - bash: 'cd $(ESY__CACHE_INSTALL_PATH) && tar -xzf $(Build.StagingDirectory)/cache-$(Agent.OS)-install/esy-cache.tar.gz -C .'
     continueOnError: true
     condition: succeeded()
     displayName: '[Cache][Restore] Untar esy cache directory'

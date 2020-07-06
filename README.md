@@ -2,7 +2,7 @@
 
 > Documentation Generation for BuckleScript projects
 
-[![Build Status](https://dev.azure.com/yawaramin/bsdoc/_apis/build/status/yawaramin.bsdoc?branchName=master)](https://dev.azure.com/yawaramin/bsdoc/_build/latest?definitionId=1?branchName=master)
+[![Build Status](https://dev.azure.com/yawaramin/bsdoc/_apis/build/status/yawaramin.bsdoc?branchName=master)](https://dev.azure.com/yawaramin/bsdoc/_build/latest?definitionId=5?branchName=master)
 
 Read more in the docs: [BsDoc](https://reasonml-community.github.io/bsdoc)
 
