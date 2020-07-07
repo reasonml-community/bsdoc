@@ -2,7 +2,8 @@
 
 > Documentation Generation for BuckleScript projects
 
-[![Build Status](https://dev.azure.com/yawaramin/bsdoc/_apis/build/status/yawaramin.bsdoc?branchName=master)](https://dev.azure.com/yawaramin/bsdoc/_build/latest?definitionId=5?branchName=master)
+[![npm](https://img.shields.io/npm/v/bsdoc.svg)](https://npmjs.org/package/bsdoc)
+[![Build Status](https://dev.azure.com/yawaramin/bsdoc/_apis/build/status/reasonml-community.bsdoc?branchName=master)](https://dev.azure.com/yawaramin/bsdoc/_build/latest?definitionId=5&branchName=master)
 
 Read more in the docs: [BsDoc](https://reasonml-community.github.io/bsdoc)
 
