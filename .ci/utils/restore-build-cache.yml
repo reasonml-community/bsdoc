@@ -1,6 +1,22 @@
-# Steps for restoring project cache
-
 steps:
+- bash: |
+    # COMPUTE THE ESY INSTALL CACHE LOCATION AHEAD OF TIME
+    DESIRED_LEN="86"
+    HOME_ESY3="$HOME/.esy/3"
+    HOME_ESY3_LEN=${#HOME_ESY3}
+    NUM_UNDERS=$(echo "$(($DESIRED_LEN-$HOME_ESY3_LEN))")
+    UNDERS=$(printf "%-${NUM_UNDERS}s" "_")
+    UNDERS="${UNDERS// /_}"
+    THE_ESY__CACHE_INSTALL_PATH=${HOME_ESY3}${UNDERS}/i
+    if [ "$AGENT_OS" == "Windows_NT" ]; then
+      THE_ESY__CACHE_INSTALL_PATH=$( cygpath --mixed --absolute "$THE_ESY__CACHE_INSTALL_PATH")
+    fi
+    echo "THE_ESY__CACHE_INSTALL_PATH: $THE_ESY__CACHE_INSTALL_PATH"
+    # This will be exposed as an env var ESY__CACHE_INSTALL_PATH, or an
+    # Azure var esy__cache_install_path
+    echo "##vso[task.setvariable variable=esy__cache_install_path]$THE_ESY__CACHE_INSTALL_PATH"
+  displayName: '[Cache] calculate esy store path'
+
 - task: Cache@2
   displayName: Restore build cache
   inputs:

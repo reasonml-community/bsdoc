@@ -13,8 +13,6 @@ jobs:
     displayName: Publish release
     condition: startsWith(variables['build.sourceBranch'], 'refs/tags/')
     dependsOn: macOS
-      #- Linux
-      #- Windows
     pool:
       vmImage: macOS-latest
       demands: node.js
