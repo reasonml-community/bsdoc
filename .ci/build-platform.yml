@@ -1,7 +1,6 @@
 parameters:
   platform: "macOS"
   vmImage: "macOS-latest"
-  ESY__CACHE_SOURCE_TARBALL_PATH: $(Agent.HomeDirectory)/.esy/source/i
 
 jobs:
   - job: ${{ parameters.platform }}

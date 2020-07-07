@@ -1,6 +1,6 @@
 {
   "name": "bsdoc",
-  "version": "6.0.3-alpha",
+  "version": "6.0.4-alpha",
   "keywords": [
     "BuckleScript",
     "Odoc-driver",
